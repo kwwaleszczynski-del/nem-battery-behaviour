@@ -1,6 +1,6 @@
 # How Australia's grid batteries actually trade, and what they leave on the table
 
-![tests](https://github.com/OWNER/nem-battery-behaviour/actions/workflows/ci.yml/badge.svg)
+![tests](https://github.com/kwwaleszczynski-del/nem-battery-behaviour/actions/workflows/ci.yml/badge.svg)
 
 Australia's National Electricity Market (NEM) publishes 5-minute operational data for every grid-scale battery.
 This project reads one year of it (October 2025 to September 2026) straight from AEMO's market data archive and
