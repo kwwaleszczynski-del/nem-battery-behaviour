@@ -1,0 +1,20 @@
+{
+  "start": "2025-10-01",
+  "end": "2026-09-30",
+  "units": [
+    "WTAHB1",
+    "ERB01",
+    "VBB1",
+    "TARBESS1",
+    "TIB1",
+    "HPR1"
+  ],
+  "fleet_size": 40,
+  "rte": 0.85,
+  "degradation_cost_aud_per_mwh": 10.0,
+  "max_cycles_per_day": 1.5,
+  "example": {
+    "duid": "HPR1",
+    "day": "2026-06-22"
+  }
+}
