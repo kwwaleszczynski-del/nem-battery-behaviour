@@ -36,7 +36,7 @@ schedule that discharges exactly as much energy each day, but at the best times.
 **What the fleet does**
 
 - **One shape fits all.** All six batteries charge in the solar trough (09:00-15:00, when average prices fall to
-  10-45 AUD/MWh) and discharges into the evening peak (17:00-21:00), with a small morning discharge around 06:00.
+  10-45 AUD/MWh) and discharge into the evening peak (17:00-21:00), with a small morning discharge around 06:00.
   The median battery sells at the 76th percentile of the day's prices and buys at the 24th: the direction is right,
   but the extremes are mostly missed.
 - **Less than one cycle a day.** The median battery ran 0.75 full cycles per day; the perfect-foresight benchmark,
@@ -60,14 +60,21 @@ schedule that discharges exactly as much energy each day, but at the best times.
 - **Capacity held back explains most of the gap for some of the biggest units.**
   - The **Victorian Big Battery** offered only about 13 % of its 300 MW to the market from November to March (and
     ran 0.35 cycles per day), against 74 % and 0.76 cycles per day in April-October. This matches its System
-    Integrity Protection Scheme (SIPS) contract with AEMO, which reserves 250 MW over the summer months.
+    Integrity Protection Scheme (SIPS) contract with AEMO, which reserves up to 250 MW from 1 November to 31 March
+    ([AEMO media release](https://aemo.com.au/en/newsroom/media-release/victorian-battery-delivering-energy-reserves-in-summer)).
   - **Waratah** offered 11-22 % of its 850 MW from November to March and 40-71 % from April. Most of the battery is
-    contracted to Transgrid as a SIPS "shock absorber" (up to 700 MW / 1,400 MWh), and one of its transformers
-    failed in October 2025. Against its registered size it captured 4 %; against what it offered, 11 %. Its ratio of
+    held for a SIPS "shock absorber" service of the NSW government project (up to 700 MW / 1,400 MWh, depending on
+    season and time of day, with Transgrid as network operator;
+    [RenewEconomy, 4 August 2025](https://reneweconomy.com.au/australias-most-powerful-battery-is-now-officially-operating-as-the-grids-biggest-shock-absorber/),
+    [EnergyCo, 5 August 2025](https://www.energyco.nsw.gov.au/sites/default/files/2025-08/media-release-waratah-super-battery-project-begins-shock-absorber-operation-august-2025.pdf)),
+    and one of its high-voltage transformers failed on 18 October 2025
+    ([Energy-Storage.news](https://www.energy-storage.news/catastrophic-failure-of-transformer-at-waratah-super-battery-australias-giant-shock-absorber-for-the-grid/)).
+    Against its registered size it captured 4 %; against what it offered, 11 %. Its ratio of
     discharged to charged energy is only 66 %, presumably because auxiliary and standby losses continue while most
     of the battery sits in reserve.
-  - **Hornsdale** never offered more than about 80 of its 150 MW. Part of its capacity has been contracted to the
-    South Australian government for system-security services since 2017.
+  - **Hornsdale** never offered more than about 80 of its 150 MW. Part of its capacity (70 MW of the original
+    100 MW) has been contracted to the South Australian government for system-security services since 2017
+    ([Energy-Storage.news](https://www.energy-storage.news/undeniable-success-south-australias-129mwh-tesla-battery/)).
   - **Eraring and Tarong** were still ramping up in October-December 2025 (5 % and 0 % offered in October), and
     **Liddell** (500 MW, not in the table) discharged nothing until January 2026 and ramped up through the year: it
     has the lowest capture of the fleet (4 %).
@@ -219,6 +226,6 @@ Code: MIT. Data: Australian Energy Market Operator (AEMO), MMSDM data archive, u
 [AEMO's copyright permissions](https://www.aemo.com.au/privacy-and-legal-notices/copyright-permissions). Results are
 derived from AEMO material; AEMO is not responsible for this analysis.
 
-Context on the SIPS contracts and Waratah's transformer: AEMO media release on the Victorian Big Battery SIPS
-service (December 2021), Energy-Storage.news and RenewEconomy reporting on Waratah Super Battery (2025-2026) and on
-Hornsdale's reserve-capacity contract with the South Australian government.
+Context on the SIPS contracts, Waratah's transformer and Hornsdale's reserve contract comes from the press and media
+releases linked under Key results, checked on 31 October 2026; contract terms may have changed since and are to be
+verified.
