@@ -169,8 +169,10 @@ def fleet_scatter(fleet: pd.DataFrame, highlight: list[str], path: Path):
     for _, r in hi.sort_values("capture_ratio", ascending=False).iterrows():
         # first candidate position (right/left, above/below the dot) whose label overlaps no earlier label
         for dx, dy, ha in ((7, 3, "left"), (7, -11, "left"), (-7, 3, "right"), (-7, -11, "right")):
+            # on a light background above the markers, so a label stays readable over a grey dot
             t = ax.annotate(_short(r["name"]), (r["cycles_per_day"], 100 * r["capture_ratio"]), xytext=(dx, dy),
-                            textcoords="offset points", ha=ha, color=INK2, fontsize=8)
+                            textcoords="offset points", ha=ha, color=INK2, fontsize=8, zorder=4,
+                            bbox=dict(facecolor=SURFACE, edgecolor="none", alpha=0.85, pad=1))
             box = t.get_window_extent(renderer)
             own = Bbox.from_extents(*ax.transData.transform((r["cycles_per_day"], 100 * r["capture_ratio"])).repeat(2))
             if not any(box.overlaps(b) and not b.contains(*own.p0) for b in placed) or ha == "right" and dy < 0:
